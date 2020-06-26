@@ -18,6 +18,7 @@ export const enumHubGoalRewards = {
     reward_miner_chainable: "reward_miner_chainable",
     reward_underground_belt_tier_2: "reward_underground_belt_tier_2",
     reward_splitter_compact: "reward_splitter_compact",
+    reward_splitter_triple: "reward_splitter_triple",
     reward_cutter_quad: "reward_cutter_quad",
     reward_painter_double: "reward_painter_double",
     reward_painter_quad: "reward_painter_quad",
@@ -174,6 +175,13 @@ export const tutorialGoals = [
         required: 1,
         reward: enumHubGoalRewards.reward_freeplay,
     },
+    
+    // 20
+    {
+        shape: finalGameShape,
+        required:1,
+        reward: enumHubGoalRewards.reward_splitter_triple,
+    }// placed here for testing purposes
 ];
 
 if (G_IS_DEV) {
