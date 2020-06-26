@@ -57,10 +57,12 @@ export class MetaSplitterBuilding extends MetaBuilding {
                 enumSplitterVariants.compactInverse,
             ];
         } else if (root.hubGoals.isRewardUnlocked(enumHubGoalRewards.reward_splitter_triple)) {
-            defaultBuildingVariant,
-                enumSplitterVariants.compact,
-                enumSplitterVariants.compactInverse,
-                enumSplitterVariants.triple,
+            return [
+                    defaultBuildingVariant,
+                    enumSplitterVariants.compact,
+                    enumSplitterVariants.compactInverse,
+                    enumSplitterVariants.triple,
+                ];
         }
         return super.getAvailableVariants(root);
     }
