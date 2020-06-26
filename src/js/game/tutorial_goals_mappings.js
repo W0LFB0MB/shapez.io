@@ -40,6 +40,9 @@ export const enumHubGoalRewardsToContentUnlocked = {
     [enumHubGoalRewards.reward_splitter_compact]: typed([
         [MetaSplitterBuilding, enumSplitterVariants.compact],
     ]),
+    [enumHubGoalRewards.reward_splitter_triple]: typed ([
+        [MetaSplitterBuilding, enumSplitterVariants.triple],
+    ]),
     [enumHubGoalRewards.reward_cutter_quad]: typed([[MetaCutterBuilding, enumCutterVariants.quad]]),
     [enumHubGoalRewards.reward_painter_double]: typed([[MetaPainterBuilding, enumPainterVariants.double]]),
     [enumHubGoalRewards.reward_painter_quad]: typed([[MetaPainterBuilding, enumPainterVariants.quad]]),
