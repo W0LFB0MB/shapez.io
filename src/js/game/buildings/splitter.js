@@ -25,6 +25,8 @@ export class MetaSplitterBuilding extends MetaBuilding {
             case enumSplitterVariants.compact:
             case enumSplitterVariants.compactInverse:
                 return new Vector(1, 1);
+            case enumSplitterVariants.triple:
+                return new Vector(3, 1);
             default:
                 assertAlways(false, "Unknown splitter variant: " + variant);
         }
@@ -54,6 +56,11 @@ export class MetaSplitterBuilding extends MetaBuilding {
                 enumSplitterVariants.compact,
                 enumSplitterVariants.compactInverse,
             ];
+        } else if (root.hubGoals.isRewardUnlocked(enumHubGoalRewards.reward_splitter_triple)) {
+            defaultBuildingVariant,
+                enumSplitterVariants.compact,
+                enumSplitterVariants.compactInverse,
+                enumSplitterVariants.triple,
         }
         return super.getAvailableVariants(root);
     }
@@ -157,6 +164,37 @@ export class MetaSplitterBuilding extends MetaBuilding {
 
                 entity.components.ItemAcceptor.beltUnderlays = [
                     { pos: new Vector(0, 0), direction: enumDirection.top },
+                ];
+
+                break;
+            }
+                
+            case enumSplitterVariants.triple: {
+                entity.components.ItemAcceptor.setSlots([
+                    {
+                        pos: new Vector(0, 0),
+                        directions: [enumDirection.bottom],
+                    },
+                    {
+                        pos: new Vector(1, 0),
+                        directions: [enumDirection.bottom],
+                    },
+                    {
+                        pos: new Vector(2, 0),
+                        directions: [enumDirection.bottom],
+                    },
+                ]);
+
+                entity.components.ItemEjector.setSlots([
+                    { pos: new Vector(0, 0), direction: enumDirection.top },
+                    { pos: new Vector(1, 0), direction: enumDirection.top },
+                    { pos: new Vector(2, 0), direction: enumDirection.top },
+                ]);
+
+                entity.components.ItemAcceptor.beltUnderlays = [
+                    { pos: new Vector(0, 0), direction: enumDirection.top },
+                    { pos: new Vector(1, 0), direction: enumDirection.top },
+                    { pos: new Vector(2, 0), direction: enumDirection.top },
                 ];
 
                 break;
