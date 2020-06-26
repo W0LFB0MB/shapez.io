@@ -11,7 +11,7 @@ import { T } from "../../translations";
 import { formatItemsPerSecond } from "../../core/utils";
 
 /** @enum {string} */
-export const enumSplitterVariants = { compact: "compact", compactInverse: "compact-inverse" };
+export const enumSplitterVariants = { compact: "compact", compactInverse: "compact-inverse", triple: "triple" };
 
 export class MetaSplitterBuilding extends MetaBuilding {
     constructor() {
