@@ -11,7 +11,7 @@ import { T } from "../../translations";
 import { formatItemsPerSecond } from "../../core/utils";
 
 /** @enum {string} */
-export const enumSplitterVariants = { compact: "compact", compactInverse: "compact-inverse", triple: "triple" };
+export const enumSplitterVariants = { compact: "compact", compactInverse: "compact-inverse", tri: "tri" };
 
 export class MetaSplitterBuilding extends MetaBuilding {
     constructor() {
@@ -25,7 +25,7 @@ export class MetaSplitterBuilding extends MetaBuilding {
             case enumSplitterVariants.compact:
             case enumSplitterVariants.compactInverse:
                 return new Vector(1, 1);
-            case enumSplitterVariants.triple:
+            case enumSplitterVariants.tri:
                 return new Vector(3, 1);
             default:
                 assertAlways(false, "Unknown splitter variant: " + variant);
@@ -56,12 +56,12 @@ export class MetaSplitterBuilding extends MetaBuilding {
                 enumSplitterVariants.compact,
                 enumSplitterVariants.compactInverse,
             ];
-        } else if (root.hubGoals.isRewardUnlocked(enumHubGoalRewards.reward_splitter_triple)) {
+        } else if (root.hubGoals.isRewardUnlocked(enumHubGoalRewards.reward_splitter_tri)) {
             return [
                     defaultBuildingVariant,
                     enumSplitterVariants.compact,
                     enumSplitterVariants.compactInverse,
-                    enumSplitterVariants.triple,
+                    enumSplitterVariants.tri,
                 ];
         }
         return super.getAvailableVariants(root);
@@ -171,7 +171,7 @@ export class MetaSplitterBuilding extends MetaBuilding {
                 break;
             }
                 
-            case enumSplitterVariants.triple: {
+            case enumSplitterVariants.tri: {
                 entity.components.ItemAcceptor.setSlots([
                     {
                         pos: new Vector(0, 0),
