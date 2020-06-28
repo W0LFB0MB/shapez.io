@@ -193,11 +193,11 @@ export class MetaSplitterBuilding extends MetaBuilding {
                     { pos: new Vector(2, 0), direction: enumDirection.top },
                 ]);
 
-                entity.components.ItemAcceptor.beltUnderlays = [
-                    { pos: new Vector(0, 0), direction: enumDirection.top },
-                    { pos: new Vector(1, 0), direction: enumDirection.top },
-                    { pos: new Vector(2, 0), direction: enumDirection.top },
-                ];
+                entity.components.ItemAcceptor.beltUnderlays = ([
+                    { pos: new Vector(0, 0), direction: enumDirection.top, layer: enumLayer.regular },
+                    { pos: new Vector(1, 0), direction: enumDirection.top, layer: enumLayer.regular },
+                    { pos: new Vector(2, 0), direction: enumDirection.top, layer: enumLayer.regular },
+                ]);
 
                 break;
             }
