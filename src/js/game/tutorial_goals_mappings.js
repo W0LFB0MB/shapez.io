@@ -2,7 +2,7 @@ import { MetaBuilding, defaultBuildingVariant } from "./meta_building";
 import { MetaCutterBuilding, enumCutterVariants } from "./buildings/cutter";
 import { MetaRotaterBuilding, enumRotaterVariants } from "./buildings/rotater";
 import { MetaPainterBuilding, enumPainterVariants } from "./buildings/painter";
-import { MetaMixerBuilding } from "./buildings/mixer";
+import { MetaMixerBuilding, enumMixerVariants } from "./buildings/mixer";
 import { MetaStackerBuilding } from "./buildings/stacker";
 import { MetaSplitterBuilding, enumSplitterVariants } from "./buildings/splitter";
 import { MetaUndergroundBeltBuilding, enumUndergroundBeltVariants } from "./buildings/underground_belt";
@@ -40,6 +40,7 @@ export const enumHubGoalRewardsToContentUnlocked = {
     [enumHubGoalRewards.reward_splitter_compact]: typed([
         [MetaSplitterBuilding, enumSplitterVariants.compact],
     ]),
+    [enumHubGoalRewards.reward_mixer_inverse]: typed ([[MetaSplitterBuilding, enumMixerVariants.inverse]]),
     [enumHubGoalRewards.reward_cutter_quad]: typed([[MetaCutterBuilding, enumCutterVariants.quad]]),
     [enumHubGoalRewards.reward_painter_double]: typed([[MetaPainterBuilding, enumPainterVariants.double]]),
     [enumHubGoalRewards.reward_painter_quad]: typed([[MetaPainterBuilding, enumPainterVariants.quad]]),

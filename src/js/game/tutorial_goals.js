@@ -10,6 +10,7 @@ export const enumHubGoalRewards = {
     reward_rotater: "reward_rotater",
     reward_painter: "reward_painter",
     reward_mixer: "reward_mixer",
+    reward_mixer_inverse: "reward_mixer_inverse",
     reward_stacker: "reward_stacker",
     reward_splitter: "reward_splitter",
     reward_tunnel: "reward_tunnel",
@@ -33,6 +34,14 @@ export const enumHubGoalRewards = {
 };
 
 export const tutorialGoals = [
+    //0
+    //testing
+    {
+        shape: "CuCuCuCu", // belts t1
+        required: 1,
+        reward: enumHubGoalRewards.reward_mixer_inverse,
+    },
+
     // 1
     // Circle
     {
